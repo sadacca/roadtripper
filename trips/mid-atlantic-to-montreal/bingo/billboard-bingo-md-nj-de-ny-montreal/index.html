@@ -352,20 +352,21 @@ function buildPool(region) {
 // For 4-card mode, assign each card a different region label
 const CARD_REGIONS = ['md','de','nj','ny'];
 
-// Outline the badge text in whichever of black/white contrasts more with
-// the cell's background, so the label stays legible even when the chosen
-// text accent color sits close in luminance to its background (e.g. a red
-// label on a dark blue tile).
+// Outline the badge text in whichever of black/white contrasts with the
+// TEXT'S OWN color (not the background), so the outline always reads
+// against the glyph itself instead of disappearing when light text on a
+// dark tile gets a same-color light outline (or vice versa).
 function bgLuminance(hex) {
-  const v = hex.replace('#', '');
+  let v = hex.replace('#', '');
+  if (v.length === 3) v = v.split('').map(ch => ch + ch).join('');
   const r = parseInt(v.substring(0, 2), 16) / 255;
   const g = parseInt(v.substring(2, 4), 16) / 255;
   const b = parseInt(v.substring(4, 6), 16) / 255;
   return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 }
 
-function textOutline(bg) {
-  const stroke = bgLuminance(bg) > 0.5 ? 'rgba(0,0,0,0.75)' : 'rgba(255,255,255,0.85)';
+function textOutline(textColor) {
+  const stroke = bgLuminance(textColor) > 0.5 ? 'rgba(0,0,0,0.8)' : 'rgba(255,255,255,0.9)';
   return `-1px -1px 0 ${stroke}, 1px -1px 0 ${stroke}, -1px 1px 0 ${stroke}, 1px 1px 0 ${stroke}, 0 0 3px ${stroke}`;
 }
 
@@ -374,7 +375,7 @@ function cellHTML(item, isFree) {
   const fs  = len > 14 ? '0.5rem' : len > 11 ? '0.56rem' : len > 8 ? '0.63rem' : '0.7rem';
   const click = isFree ? '' : 'onclick="toggleCell(this)"';
   const iconHTML = item.icon ? `<span class="badge-icon">${item.icon}</span>` : '';
-  const outline = textOutline(item.bg);
+  const outline = textOutline(item.color);
   return `<div class="cell ${isFree ? 'free-space marked' : ''}"
     style="background:${item.bg}"
     title="${item.label}"
