@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Billboard Bingo – MD · NJ · DE · NY · Montréal</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap');
+
+  :root {
+    --asphalt: #1a1a2e;
+    --yellow-line: #f5c518;
+    --sign-green: #2d6a4f;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--asphalt); font-family: 'Nunito', sans-serif; min-height: 100vh; }
+
+  header {
+    background: var(--asphalt); padding: 2rem 1rem 1.8rem;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .road-stripe {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 14px;
+    background: repeating-linear-gradient(90deg, var(--yellow-line) 0 40px, transparent 40px 80px);
+  }
+  header h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    color: var(--yellow-line); letter-spacing: 2px; text-shadow: 3px 3px 0 #000;
+  }
+  header p { color: #aac4d0; font-size: 0.95rem; margin-top: 0.3rem; font-weight: 600; }
+
+  .route-pills {
+    display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap;
+    padding: 0.6rem 1rem 0;
+  }
+  .pill {
+    font-size: 0.75rem; font-weight: 800; padding: 0.25rem 0.7rem;
+    border-radius: 99px; text-transform: uppercase; letter-spacing: 0.5px;
+    cursor: pointer; transition: opacity 0.15s, transform 0.1s;
+    border: 2px solid transparent;
+  }
+  .pill:hover { opacity: 0.85; }
+  .pill.active { border-color: #fff; transform: scale(1.07); }
+  .pill-all    { background: #4a4e69; color: #fff; }
+  .pill-md     { background: #cc0000; color: #fff; }
+  .pill-de     { background: #003087; color: #FFD700; }
+  .pill-nj     { background: #FFD700; color: #003087; }
+  .pill-ny     { background: #ff671f; color: #fff; }
+  .pill-qc     { background: #005BAC; color: #fff; }
+
+  .controls {
+    display: flex; justify-content: center; gap: 1rem;
+    padding: 1rem 1rem 1.5rem; flex-wrap: wrap;
+  }
+  .btn {
+    font-family: 'Fredoka One', cursive; font-size: 1.05rem;
+    padding: 0.55rem 1.4rem; border: none; border-radius: 8px; cursor: pointer;
+    letter-spacing: 1px; transition: transform 0.1s, box-shadow 0.1s;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.4);
+  }
+  .btn:active { transform: translateY(2px); box-shadow: 0 2px 0 rgba(0,0,0,0.4); }
+  .btn-primary   { background: var(--yellow-line); color: var(--asphalt); }
+  .btn-secondary { background: var(--sign-green); color: #fff; }
+  .btn-print     { background: #4a4e69; color: #fff; }
+
+  .region-label {
+    text-align: center; font-family: 'Fredoka One', cursive;
+    font-size: 1rem; color: #aac4d0; letter-spacing: 1px;
+    padding-bottom: 0.5rem;
+  }
+
+  .cards-container {
+    display: flex; flex-wrap: wrap; gap: 2rem;
+    justify-content: center; padding: 0 1rem 3rem;
+  }
+
+  .card-wrap { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
+  .card-region-tag {
+    font-size: 0.72rem; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 1px; padding: 0.2rem 0.8rem; border-radius: 99px; color: #fff;
+  }
+
+  .bingo-card {
+    background: #f8f9fa; border-radius: 12px; overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5); width: 370px; flex-shrink: 0;
+  }
+  .card-header {
+    background: var(--sign-green); padding: 0.55rem 1rem;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .card-title { font-family: 'Fredoka One', cursive; color: #fff; font-size: 1.35rem; letter-spacing: 3px; }
+  .card-num   { font-size: 0.75rem; color: #a8d5b5; font-weight: 700; text-transform: uppercase; }
+
+  .bingo-cols { display: grid; grid-template-columns: repeat(5,1fr); background: var(--asphalt); }
+  .col-letter {
+    font-family: 'Fredoka One', cursive; color: var(--yellow-line);
+    font-size: 1.4rem; text-align: center; padding: 0.35rem 0;
+  }
+
+  .bingo-grid {
+    display: grid; grid-template-columns: repeat(5,1fr);
+    gap: 2px; background: #ccc; border: 2px solid #ccc;
+  }
+
+  .cell {
+    min-height: 68px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center; padding: 4px 3px;
+    cursor: pointer; position: relative; overflow: hidden;
+    transition: filter 0.15s;
+    user-select: none; -webkit-user-select: none;
+  }
+  .cell:hover { filter: brightness(0.88); }
+  .cell.marked { filter: brightness(0.6) saturate(0.7); }
+  .cell.marked::after {
+    content: '✓'; position: absolute; top: 3px; right: 5px;
+    font-size: 0.8rem; font-weight: 900; color: rgba(255,255,255,0.9);
+  }
+  .cell.free-space { cursor: default; }
+
+  .brand-strip { position: absolute; top: 0; left: 0; right: 0; height: 5px; }
+
+  .badge { display: flex; flex-direction: column; align-items: center; gap: 2px; width: 100%; }
+  .badge-icon { font-size: 1.35rem; line-height: 1; }
+  .badge-text { font-weight: 800; line-height: 1.15; word-break: break-word; max-width: 66px; }
+  .badge-sub  { font-size: 0.48rem; font-weight: 700; opacity: 0.75; text-transform: uppercase; letter-spacing: 0.3px; }
+
+  .how-to {
+    background: #16213e; color: #aac4d0;
+    text-align: center; padding: 1rem 1.5rem;
+    font-size: 0.82rem; line-height: 1.6;
+    border-top: 3px solid var(--yellow-line);
+  }
+  .how-to strong { color: var(--yellow-line); }
+
+  @media print {
+    body { background: #fff; }
+    header { background: #fff; }
+    header h1 { color: #000; text-shadow: none; }
+    header p, .route-pills, .controls, .how-to, .road-stripe, .card-region-tag { display: none; }
+    .cards-container { gap: 1rem; }
+    .bingo-card { box-shadow: none; border: 2px solid #333; page-break-inside: avoid; }
+    .card-header, .bingo-cols { background: #333 !important; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🚗 BILLBOARD BINGO</h1>
+  <p>MD · NJ · DE · NY · Montréal — tap a square when you spot it!</p>
+  <div class="route-pills" id="pills">
+    <span class="pill pill-all active" onclick="setRegion('all',this)">🗺 All States</span>
+    <span class="pill pill-md"  onclick="setRegion('md',this)">🦀 Maryland</span>
+    <span class="pill pill-de"  onclick="setRegion('de',this)">🏖 Delaware</span>
+    <span class="pill pill-nj"  onclick="setRegion('nj',this)">🌿 New Jersey</span>
+    <span class="pill pill-ny"  onclick="setRegion('ny',this)">🗽 New York</span>
+    <span class="pill pill-qc"  onclick="setRegion('qc',this)">🍁 Montréal</span>
+  </div>
+  <div class="road-stripe"></div>
+</header>
+
+<div class="controls">
+  <button class="btn btn-primary"   onclick="generateCards()">🎲 New Cards</button>
+  <button class="btn btn-secondary" onclick="resetAll()">↺ Reset Marks</button>
+  <button class="btn btn-print"     onclick="window.print()">🖨️ Print</button>
+</div>
+
+<div class="cards-container" id="cardsContainer"></div>
+
+<div class="how-to">
+  <strong>How to play:</strong> Each player picks a card. Tap a square when you spot that sign or place for real.
+  Five in a row — across, down, or diagonal — wins. Shout <strong>BINGO!</strong>
+  Pick a state tab to get region-specific cards, or use All States for a mix.
+</div>
+
+<script>
+// regions: 'all' = appears in any mix | state code = regional specialty card
+// icon: only when it clearly IS the thing depicted
+
+const ITEMS = {
+
+  // ── NATIONAL CHAINS (appear on all cards) ──────────────────────
+  national: [
+    { label:"McDonald's",    sub:"Fast Food",    icon:"🍟", bg:"#DA291C", color:"#FFC72C", strip:"#FFC72C" },
+    { label:"Burger King",   sub:"Fast Food",    icon:"🍔", bg:"#003087", color:"#F5C800", strip:"#D62300" },
+    { label:"Wendy's",       sub:"Fast Food",    icon:"🍔", bg:"#E2231A", color:"#fff",    strip:"#fff" },
+    { label:"Subway",        sub:"Subs",         icon:"🥖", bg:"#009743", color:"#FFC20E", strip:"#FFC20E" },
+    { label:"Taco Bell",     sub:"Mexican",      icon:"🌮", bg:"#702082", color:"#F2A900", strip:"#F2A900" },
+    { label:"Chick-fil-A",   sub:"Chicken",      icon:"🍗", bg:"#E51636", color:"#fff",    strip:"#fff" },
+    { label:"Panera",        sub:"Bakery Café",  icon:"🥐", bg:"#7B3F00", color:"#F5C518", strip:"#F5C518" },
+    { label:"Dunkin'",       sub:"Coffee",       icon:"🍩", bg:"#FF671F", color:"#8B1A4A", strip:"#8B1A4A" },
+    { label:"Starbucks",     sub:"Coffee",       icon:"☕", bg:"#00704A", color:"#fff",    strip:"#CBA258" },
+    { label:"Pizza Hut",     sub:"Pizza",        icon:"🍕", bg:"#EE3124", color:"#fff",    strip:"#fff" },
+    { label:"Domino's",      sub:"Pizza",        icon:"🍕", bg:"#006491", color:"#E31837", strip:"#E31837" },
+    { label:"Dairy Queen",   sub:"Ice Cream",    icon:"🍦", bg:"#CC2529", color:"#fff",    strip:"#fff" },
+    { label:"Five Guys",     sub:"Burgers",      icon:"🍔", bg:"#C8102E", color:"#FFC20E", strip:"#FFC20E" },
+    { label:"Shell",         sub:"Gas Station",  icon:null, bg:"#DA291C", color:"#FFC20E", strip:"#FFC20E" },
+    { label:"Exxon",         sub:"Gas Station",  icon:null, bg:"#003087", color:"#CC0000", strip:"#CC0000" },
+    { label:"BP",            sub:"Gas Station",  icon:null, bg:"#007A33", color:"#FFD700", strip:"#FFD700" },
+    { label:"Sunoco",        sub:"Gas Station",  icon:null, bg:"#003087", color:"#FFD700", strip:"#FFD700" },
+    { label:"Walmart",       sub:"Retail",       icon:null, bg:"#0071CE", color:"#FFC220", strip:"#FFC220" },
+    { label:"Target",        sub:"Retail",       icon:"🎯", bg:"#CC0000", color:"#fff",    strip:"#fff" },
+    { label:"Home Depot",    sub:"Hardware",     icon:"🔨", bg:"#F96302", color:"#fff",    strip:"#fff" },
+    { label:"Walgreens",     sub:"Pharmacy",     icon:"💊", bg:"#E31837", color:"#fff",    strip:"#fff" },
+    { label:"CVS",           sub:"Pharmacy",     icon:"💊", bg:"#CC0000", color:"#fff",    strip:"#fff" },
+    { label:"Hampton Inn",   sub:"Hotel",        icon:null, bg:"#003087", color:"#CC0000", strip:"#CC0000" },
+    { label:"Marriott",      sub:"Hotel",        icon:null, bg:"#8B0000", color:"#fff",    strip:"#fff" },
+    { label:"Holiday Inn",   sub:"Hotel",        icon:null, bg:"#006400", color:"#FFD700", strip:"#FFD700" },
+    { label:"Comfort Inn",   sub:"Hotel",        icon:null, bg:"#006491", color:"#fff",    strip:"#F5C518" },
+
+    // Road signs — always relevant
+    { label:"Speed Limit 65",  sub:"Road Sign",  icon:"🚦", bg:"#fff",    color:"#000",    strip:"#E31837" },
+    { label:"Speed Limit 55",  sub:"Road Sign",  icon:"🚦", bg:"#fff",    color:"#000",    strip:"#E31837" },
+    { label:"Road Work Ahead", sub:"Road Sign",  icon:"🚧", bg:"#F96302", color:"#000",    strip:"#000" },
+    { label:"Deer Crossing",   sub:"Road Sign",  icon:"🦌", bg:"#FFD700", color:"#000",    strip:"#000" },
+    { label:"Rest Area",       sub:"Road Sign",  icon:"🛖", bg:"#2d6a4f", color:"#fff",    strip:"#FFD700" },
+    { label:"Toll Booth",      sub:"Road Sign",  icon:null, bg:"#005596", color:"#fff",    strip:"#FFD700" },
+    { label:"Weigh Station",   sub:"Road Sign",  icon:null, bg:"#555",    color:"#fff",    strip:"#FFD700" },
+    { label:"Truck Escape Ramp",sub:"Road Sign", icon:"🚛", bg:"#2d6a4f", color:"#fff",    strip:"#fff" },
+    { label:"Car Wash",        sub:"Sign",       icon:"🫧", bg:"#009DD9", color:"#fff",    strip:"#fff" },
+    { label:"Hospital Sign",   sub:"Sign",       icon:"🏥", bg:"#CC0000", color:"#fff",    strip:"#fff" },
+    { label:"Winery",          sub:"Sign",       icon:"🍷", bg:"#722F37", color:"#fff",    strip:"#FFD700" },
+    { label:"Campground",      sub:"Sign",       icon:"⛺", bg:"#5a3e28", color:"#FFD700", strip:"#FFD700" },
+    { label:"State Park",      sub:"Sign",       icon:"🌲", bg:"#2d6a4f", color:"#fff",    strip:"#FFD700" },
+    { label:"Farm Stand",      sub:"Roadside",   icon:"🥕", bg:"#F96302", color:"#fff",    strip:"#2d6a4f" },
+    { label:"Lawyer Ad",       sub:"Billboard",  icon:null, bg:"#1a1a2e", color:"#F5C518", strip:"#F5C518" },
+    { label:"Car Dealership",  sub:"Sign",       icon:null, bg:"#003087", color:"#fff",    strip:"#E31837" },
+    { label:"Church Billboard",sub:"Billboard",  icon:"✝️", bg:"#4a4e69", color:"#fff",    strip:"#FFD700" },
+    { label:"Political Sign",  sub:"Roadside",   icon:"🗳️", bg:"#003087", color:"#CC0000", strip:"#CC0000" },
+    { label:"Water Tower",     sub:"Roadside",   icon:null, bg:"#4a4e69", color:"#fff",    strip:"#aac4d0" },
+    { label:"Oil Change",      sub:"Sign",       icon:"🔧", bg:"#333",    color:"#F5C518", strip:"#F5C518" },
+  ],
+
+  // ── MARYLAND ───────────────────────────────────────────────────
+  md: [
+    { label:"Royal Farms",    sub:"MD Chain",    icon:"🐓", bg:"#CC0000", color:"#fff",    strip:"#FFD700" },
+    { label:"Weis Markets",   sub:"MD/PA Grocer",icon:null, bg:"#CC0000", color:"#fff",    strip:"#fff" },
+    { label:"MOM's Organic",  sub:"MD Grocer",   icon:"🥦", bg:"#2d6a4f", color:"#fff",    strip:"#FFD700" },
+    { label:"Crab Shack",     sub:"MD Seafood",  icon:"🦀", bg:"#CC0000", color:"#fff",    strip:"#FFD700" },
+    { label:"Old Bay Sign",   sub:"MD Icon",     icon:"🦀", bg:"#F96302", color:"#fff",    strip:"#CC0000" },
+    { label:"Bay Bridge Sign",sub:"MD Sign",     icon:"🌉", bg:"#003087", color:"#fff",    strip:"#FFD700" },
+    { label:"I-95 / I-495",   sub:"Beltway",     icon:null, bg:"#003087", color:"#fff",    strip:"#CC0000" },
+    { label:"Fort McHenry",   sub:"MD Landmark", icon:"🏛️", bg:"#CC0000", color:"#fff",    strip:"#003087" },
+  ],
+
+  // ── DELAWARE ──────────────────────────────────────────────────
+  de: [
+    { label:"Wawa",           sub:"DE/NJ/PA Fave",icon:null, bg:"#CC0000", color:"#fff",    strip:"#FFD700" },
+    { label:"Tax-Free Sign",  sub:"DE Icon",     icon:"🏷️", bg:"#003087", color:"#FFD700", strip:"#FFD700" },
+    { label:"Rehoboth Beach", sub:"DE Sign",     icon:"🏖️", bg:"#009DD9", color:"#fff",    strip:"#FFD700" },
+    { label:"Dover Downs",    sub:"DE Casino",   icon:"🎰", bg:"#4B0082", color:"#FFD700", strip:"#FFD700" },
+    { label:"DE Welcome Sign",sub:"State Sign",  icon:"🪧", bg:"#003087", color:"#FFD700", strip:"#FFD700" },
+    { label:"Outlet Mall",    sub:"DE Staple",   icon:null, bg:"#8B0000", color:"#fff",    strip:"#FFD700" },
+    { label:"Chicken Farm",   sub:"DE Icon",     icon:"🐓", bg:"#F5C518", color:"#333",    strip:"#333" },
+    { label:"Capriotti's",    sub:"DE Sub Chain",icon:"🥖", bg:"#CC0000", color:"#fff",    strip:"#fff" },
+  ],
+
+  // ── NEW JERSEY ────────────────────────────────────────────────
+  nj: [
+    { label:"Wawa",           sub:"NJ Institution",icon:null, bg:"#CC0000", color:"#fff",   strip:"#FFD700" },
+    { label:"Turnpike Sign",  sub:"NJ Parkway",  icon:null, bg:"#003087", color:"#FFD700", strip:"#FFD700" },
+    { label:"Garden State Pkwy",sub:"NJ Road",   icon:null, bg:"#2d6a4f", color:"#fff",    strip:"#FFD700" },
+    { label:"Pork Roll Sign", sub:"NJ Food",     icon:null, bg:"#8B4513", color:"#FFD700", strip:"#FFD700" },
+    { label:"NJ Diner",       sub:"NJ Icon",     icon:"🍳", bg:"#F5C518", color:"#000",    strip:"#CC0000" },
+    { label:"Jersey Mike's",  sub:"NJ Chain",    icon:"🥖", bg:"#CC0000", color:"#fff",    strip:"#fff" },
+    { label:"ShopRite",       sub:"NJ Grocer",   icon:null, bg:"#CC0000", color:"#fff",    strip:"#FFD700" },
+    { label:"Atlantic City",  sub:"NJ Sign",     icon:"🎰", bg:"#4B0082", color:"#FFD700", strip:"#FFD700" },
+    { label:"State Police",   sub:"NJ Sign",     icon:null, bg:"#003087", color:"#fff",    strip:"#FFD700" },
+    { label:"The Jersey Shore",sub:"NJ Sign",    icon:"🌊", bg:"#009DD9", color:"#fff",    strip:"#FFD700" },
+  ],
+
+  // ── NEW YORK ──────────────────────────────────────────────────
+  ny: [
+    { label:"Stewart's Shops",sub:"NY Chain",    icon:null, bg:"#E31837", color:"#fff",    strip:"#fff" },
+    { label:"Thruway Sign",   sub:"NY Road",     icon:null, bg:"#003087", color:"#FFD700", strip:"#FFD700" },
+    { label:"Price Chopper",  sub:"NY Grocer",   icon:null, bg:"#CC0000", color:"#fff",    strip:"#FFD700" },
+    { label:"Hannaford",      sub:"NY Grocer",   icon:null, bg:"#003087", color:"#fff",    strip:"#CC0000" },
+    { label:"Wegmans",        sub:"NY/NJ Grocer",icon:null, bg:"#CC0000", color:"#fff",    strip:"#fff" },
+    { label:"Finger Lakes",   sub:"NY Sign",     icon:"🍷", bg:"#722F37", color:"#fff",    strip:"#FFD700" },
+    { label:"Adirondacks",    sub:"NY Sign",     icon:"🏔️", bg:"#2d6a4f", color:"#fff",    strip:"#FFD700" },
+    { label:"Saratoga",       sub:"NY Sign",     icon:null, bg:"#4a4e69", color:"#fff",    strip:"#F5C518" },
+    { label:"I Love NY Sign", sub:"NY Icon",     icon:"❤️", bg:"#CC0000", color:"#fff",    strip:"#fff" },
+    { label:"Speedway",       sub:"NY Gas",      icon:null, bg:"#CC0000", color:"#FFD700", strip:"#FFD700" },
+  ],
+
+  // ── QUÉBEC / MONTRÉAL ─────────────────────────────────────────
+  qc: [
+    { label:"Tim Hortons",    sub:"Canadian Chain",icon:"☕",bg:"#CC0000", color:"#fff",   strip:"#FFD700" },
+    { label:"Couche-Tard",    sub:"QC Conv Store",icon:null, bg:"#CC0000", color:"#fff",   strip:"#FFD700" },
+    { label:"IGA",            sub:"QC Grocer",    icon:null, bg:"#CC0000", color:"#fff",   strip:"#fff" },
+    { label:"Métro Grocery",  sub:"QC Grocer",    icon:null, bg:"#CC0000", color:"#FFD700",strip:"#FFD700" },
+    { label:"Bilingue Sign",  sub:"French/English",icon:null,bg:"#005BAC", color:"#fff",   strip:"#fff" },
+    { label:"Arrêt Sign",     sub:"QC Stop Sign", icon:"🛑", bg:"#CC0000", color:"#fff",   strip:"#fff" },
+    { label:"Fleur-de-lis",   sub:"QC Flag",      icon:"⚜️", bg:"#005BAC", color:"#fff",   strip:"#fff" },
+    { label:"Montréal Bagel", sub:"QC Food",      icon:"🥯", bg:"#8B4513", color:"#FFD700",strip:"#FFD700" },
+    { label:"Poutine Sign",   sub:"QC Food",      icon:"🍟", bg:"#8B4513", color:"#FFD700",strip:"#FFD700" },
+    { label:"Autoroute Sign", sub:"QC Road",      icon:null, bg:"#005BAC", color:"#fff",   strip:"#FFD700" },
+    { label:"Petro-Canada",   sub:"QC Gas",       icon:null, bg:"#CC0000", color:"#fff",   strip:"#fff" },
+    { label:"SAQ Wine Store", sub:"QC Liquor",    icon:"🍷", bg:"#722F37", color:"#fff",   strip:"#FFD700" },
+  ],
+};
+
+const FREE = { label:"FREE", sub:"", icon:"⭐", bg:"#2d6a4f", color:"#fff", strip:"#F5C518" };
+
+const REGION_META = {
+  all: { label:"Mix",      tagBg:"#4a4e69" },
+  md:  { label:"Maryland", tagBg:"#cc0000" },
+  de:  { label:"Delaware", tagBg:"#003087" },
+  nj:  { label:"New Jersey",tagBg:"#8B8000" },
+  ny:  { label:"New York", tagBg:"#ff671f" },
+  qc:  { label:"Montréal", tagBg:"#005BAC" },
+};
+
+let currentRegion = 'all';
+
+function setRegion(r, el) {
+  currentRegion = r;
+  document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  generateCards();
+}
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// Build a pool for a given region:
+// - 'all' mode: national + small random sample of each region's items
+// - specific region: national + that region's full list
+function buildPool(region) {
+  const nat = [...ITEMS.national];
+  if (region === 'all') {
+    // sprinkle ~3 items from each region
+    const regional = [];
+    ['md','de','nj','ny','qc'].forEach(r => {
+      regional.push(...shuffle(ITEMS[r]).slice(0, 3));
+    });
+    return shuffle([...nat, ...regional]);
+  }
+  return shuffle([...nat, ...ITEMS[region]]);
+}
+
+// For 4-card mode, assign each card a different region label
+const CARD_REGIONS = ['md','de','nj','ny'];
+
+function cellHTML(item, isFree) {
+  const len = item.label.length;
+  const fs  = len > 14 ? '0.5rem' : len > 11 ? '0.56rem' : len > 8 ? '0.63rem' : '0.7rem';
+  const click = isFree ? '' : 'onclick="toggleCell(this)"';
+  const iconHTML = item.icon ? `<span class="badge-icon">${item.icon}</span>` : '';
+  return `<div class="cell ${isFree ? 'free-space marked' : ''}"
+    style="background:${item.bg}"
+    title="${item.label}"
+    ${click}>
+    <div class="brand-strip" style="background:${item.strip}"></div>
+    <div class="badge">
+      ${iconHTML}
+      <span class="badge-text" style="color:${item.color};font-size:${fs}">${item.label}</span>
+      ${item.sub ? `<span class="badge-sub" style="color:${item.color}">${item.sub}</span>` : ''}
+    </div>
+  </div>`;
+}
+
+function makeCard(cardNum, region) {
+  const pool  = buildPool(region);
+  const items = pool.slice(0, 24);
+  items.splice(12, 0, FREE);
+
+  const meta = REGION_META[region];
+  const wrap = document.createElement('div');
+  wrap.className = 'card-wrap';
+
+  const tag = document.createElement('div');
+  tag.className = 'card-region-tag';
+  tag.style.background = meta.tagBg;
+  tag.textContent = meta.label;
+  wrap.appendChild(tag);
+
+  const card = document.createElement('div');
+  card.className = 'bingo-card';
+  card.innerHTML = `
+    <div class="card-header">
+      <span class="card-title">BINGO</span>
+      <span class="card-num">Card #${cardNum}</span>
+    </div>
+    <div class="bingo-cols">
+      ${['B','I','N','G','O'].map(l=>`<div class="col-letter">${l}</div>`).join('')}
+    </div>
+    <div class="bingo-grid">
+      ${items.map(item => cellHTML(item, item===FREE)).join('')}
+    </div>`;
+  wrap.appendChild(card);
+  return wrap;
+}
+
+function generateCards() {
+  const c = document.getElementById('cardsContainer');
+  c.innerHTML = '';
+  if (currentRegion === 'all') {
+    // One card per state on the route + one Montréal
+    ['md','de','nj','ny','qc'].forEach((r, i) => {
+      c.appendChild(makeCard(i+1, r));
+    });
+  } else {
+    // Four cards all of same region
+    for (let i = 1; i <= 4; i++) c.appendChild(makeCard(i, currentRegion));
+  }
+}
+
+function resetAll() {
+  document.querySelectorAll('.cell.marked:not(.free-space)').forEach(el => el.classList.remove('marked'));
+}
+
+generateCards();
+</script>
+</body>
+</html>
