@@ -166,5 +166,25 @@
       "lon": -73.7307,
       "lat": 45.5042
     }
-  ]
+  ],
+  "difficulty_tiers": {
+    "medium": {
+      "grid_cols": 166,
+      "grid_rows": 144,
+      "maze_cells": 8200,
+      "loops": 0,
+      "anchor": "Notre-Dame Basilica -> Olympic Stadium",
+      "regions_covered": 19,
+      "regions_total": 19
+    },
+    "hard": {
+      "grid_cols": 213,
+      "grid_rows": 185,
+      "maze_cells": 13496,
+      "loops": 161,
+      "anchor": "Verdun Beach -> Parc-nature du Bois-de-Liesse",
+      "regions_covered": 19,
+      "regions_total": 19
+    }
+  }
 }

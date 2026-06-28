@@ -72,6 +72,54 @@ down to edges with at least one real, buildable door *before* picking the
 spanning tree, then tries many random seeds and keeps whichever gives the
 best real-region coverage, since even a guaranteed-buildable edge's exact
 door-cell pick can otherwise strand a small region in a pixel-isolated
-pocket. This reaches 91 of 94 included regions (the Gaspé peninsula's tip
-and the intentionally-disconnected Îles-de-la-Madeleine are left as
-outline-only).
+pocket. At the baseline (Easy) grid resolution this reaches 91 of 94
+included regions (the Gaspé peninsula's tip and the intentionally-
+disconnected Îles-de-la-Madeleine are left as outline-only).
+
+## Medium and Hard difficulty tiers
+
+Each region also ships two harder variants on the same page, built from the
+same real geometry/adjacency data above through a second, generic generator
+(`maze_core2.py`/`gen_maze_difficulty.py`) kept separate from the baseline
+generator so the baseline (Easy) mazes are byte-for-byte unchanged:
+
+- **Smaller grid cells** (Medium: ~0.75x the baseline cell size and ~1.7x
+  the target cell count; Hard: ~0.58x cell size and ~2.8x target cells),
+  for a finer maze with more turns and branch points per region.
+- **Start/finish anchored to real notable cities**, not the baseline's
+  farthest-grid-point heuristic. Each anchor coordinate was verified by
+  point-in-polygon against the real county/MRC geometry before use (with
+  `.buffer(0)` polygon repair where source polygons were self-intersecting)
+  rather than placed from memory:
+  - MD: Baltimore → Annapolis (Medium); Ocean City → Cumberland (Hard)
+  - DE: Wilmington → Dover (Medium); Wilmington → Lewes (Hard)
+  - NJ: Trenton → Atlantic City (Medium); Newark → Cape May (Hard)
+  - NY: Albany → New York City (Medium); Niagara Falls → New York City (Hard)
+  - QC: Montréal → Québec City (Medium); Gatineau → Québec City (Hard)
+- **Deviation distance**: the recursive-backtracker carver is biased
+  (`straight_bias` = 0.45 Medium / 0.65 Hard) to keep going in the same
+  direction when possible, so false paths run farther before dead-ending
+  instead of turning immediately.
+- **Looping paths (Hard only)**: after the perfect-maze spanning tree is
+  carved, a small fraction of cells (`loop_density` = 0.012, roughly 1.2%
+  of maze cells) get an extra wall opened between two already-mazed,
+  grid-adjacent cells that the spanning tree didn't connect directly. This
+  braids in short loops that defeat simple wall-following without changing
+  the region-level route.
+- **Varied wall thickness (Hard only)**: wall segments get a per-segment
+  random stroke width instead of one constant width, adding visual noise
+  that slows down eye-tracing without changing the actual maze topology.
+
+At these finer grid resolutions, the real ~2km water gap between Staten
+Island (Richmond County) and Kings County — and the real gap between
+Québec's Île-d'Orléans and La Côte-de-Beaupré — reliably resolves as a true
+non-adjacency instead of the coincidental raster-quantization touch that
+let the baseline's coarser grid bridge them. Both manual bridges are now
+realized explicitly: the generator finds the nearest grid-cell pair between
+the two regions and forces a doorway there regardless of grid-adjacency,
+the same real bridges/ferries the baseline doorways represent. New York
+reaches full 62/62 region coverage at both Medium and Hard. Québec reaches
+91/94 (Medium) and 93/94 (Hard) of its included regions — the small
+shortfall is the same already-disclosed pattern of small/remote MRCs left
+as outline-only at finer resolutions, consistent with the baseline's own
+91/94.

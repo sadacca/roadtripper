@@ -51,3 +51,31 @@ the Parc Jean-Drapeau islands (Île Sainte-Hélène / Île Notre-Dame). Both
 are city parkland administered outside the regular borough system, so
 they have no polygon in the source borough dataset and are left as empty
 space rather than carved with a maze.
+
+## Medium and Hard difficulty tiers
+
+The page also ships two harder variants built from the same real borough
+geometry/adjacency data above, through the same generic difficulty
+generator used for the five-region maze (`maze_core2.py`/
+`gen_maze_difficulty.py`), kept separate from the baseline generator so the
+baseline (Easy) maze is unchanged:
+
+- **Smaller grid cells**: Medium ~0.75x the baseline cell size / ~1.7x the
+  target cell count; Hard ~0.58x cell size / ~2.8x target cells.
+- **Start/finish anchored to real landmarks** instead of the baseline's
+  farthest-grid-point heuristic: Notre-Dame Basilica → Olympic Stadium
+  (Medium); Verdun Beach → Parc-nature du Bois-de-Liesse (Hard), both
+  verified by point-in-polygon against the real borough geometry. All 12
+  baseline landmarks are still marked on both tiers.
+- **Deviation distance**: the carver is biased toward continuing straight
+  (`straight_bias` = 0.45 Medium / 0.65 Hard), so false paths run farther
+  before dead-ending.
+- **Looping paths (Hard only)**: ~1.2% of maze cells get an extra wall
+  opened between two already-mazed, grid-adjacent cells the spanning tree
+  didn't connect directly, braiding in short loops that defeat simple
+  wall-following.
+- **Varied wall thickness (Hard only)**: each wall segment gets a
+  per-segment random stroke width for visual noise that doesn't change the
+  maze's actual topology.
+
+All 19 boroughs remain fully connected and covered at both Medium and Hard.

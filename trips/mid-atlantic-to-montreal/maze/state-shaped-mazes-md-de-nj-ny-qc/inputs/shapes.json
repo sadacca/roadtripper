@@ -252,7 +252,27 @@
     ],
     "grid_cols": 93,
     "grid_rows": 49,
-    "maze_cells": 1533
+    "maze_cells": 1533,
+    "difficulty_tiers": {
+      "medium": {
+        "grid_cols": 121,
+        "grid_rows": 63,
+        "maze_cells": 2667,
+        "loops": 0,
+        "anchor": "Baltimore -> Annapolis",
+        "regions_covered": 24,
+        "regions_total": 24
+      },
+      "hard": {
+        "grid_cols": 155,
+        "grid_rows": 81,
+        "maze_cells": 4396,
+        "loops": 52,
+        "anchor": "Ocean City -> Cumberland",
+        "regions_covered": 24,
+        "regions_total": 24
+      }
+    }
   },
   "de": {
     "name": "Delaware",
@@ -283,7 +303,27 @@
     ],
     "grid_cols": 43,
     "grid_rows": 104,
-    "maze_cells": 2382
+    "maze_cells": 2382,
+    "difficulty_tiers": {
+      "medium": {
+        "grid_cols": 56,
+        "grid_rows": 135,
+        "maze_cells": 4030,
+        "loops": 0,
+        "anchor": "Wilmington -> Dover",
+        "regions_covered": 3,
+        "regions_total": 3
+      },
+      "hard": {
+        "grid_cols": 72,
+        "grid_rows": 174,
+        "maze_cells": 6675,
+        "loops": 80,
+        "anchor": "Wilmington -> Lewes",
+        "regions_covered": 3,
+        "regions_total": 3
+      }
+    }
   },
   "nj": {
     "name": "New Jersey",
@@ -546,7 +586,27 @@
     ],
     "grid_cols": 49,
     "grid_rows": 94,
-    "maze_cells": 2205
+    "maze_cells": 2205,
+    "difficulty_tiers": {
+      "medium": {
+        "grid_cols": 63,
+        "grid_rows": 120,
+        "maze_cells": 3992,
+        "loops": 0,
+        "anchor": "Trenton -> Atlantic City",
+        "regions_covered": 21,
+        "regions_total": 21
+      },
+      "hard": {
+        "grid_cols": 81,
+        "grid_rows": 155,
+        "maze_cells": 6605,
+        "loops": 79,
+        "anchor": "Newark -> Cape May",
+        "regions_covered": 21,
+        "regions_total": 21
+      }
+    }
   },
   "ny": {
     "name": "New York",
@@ -1365,7 +1425,27 @@
     ],
     "grid_cols": 76,
     "grid_rows": 59,
-    "maze_cells": 1721
+    "maze_cells": 1721,
+    "difficulty_tiers": {
+      "medium": {
+        "grid_cols": 99,
+        "grid_rows": 77,
+        "maze_cells": 2962,
+        "loops": 0,
+        "anchor": "Albany -> New York City",
+        "regions_covered": 62,
+        "regions_total": 62
+      },
+      "hard": {
+        "grid_cols": 127,
+        "grid_rows": 99,
+        "maze_cells": 4930,
+        "loops": 59,
+        "anchor": "Niagara Falls -> New York City",
+        "regions_covered": 62,
+        "regions_total": 62
+      }
+    }
   },
   "qc": {
     "name": "Québec (southern MRC corridor)",
@@ -2040,6 +2120,26 @@
     "grid_rows": 133,
     "maze_cells": 10377,
     "regions_covered": 91,
-    "regions_total": 94
+    "regions_total": 94,
+    "difficulty_tiers": {
+      "medium": {
+        "grid_cols": 295,
+        "grid_rows": 173,
+        "maze_cells": 18320,
+        "loops": 0,
+        "anchor": "Montreal -> Quebec City",
+        "regions_covered": 91,
+        "regions_total": 94
+      },
+      "hard": {
+        "grid_cols": 378,
+        "grid_rows": 222,
+        "maze_cells": 30095,
+        "loops": 361,
+        "anchor": "Gatineau -> Quebec City",
+        "regions_covered": 93,
+        "regions_total": 94
+      }
+    }
   }
 }
