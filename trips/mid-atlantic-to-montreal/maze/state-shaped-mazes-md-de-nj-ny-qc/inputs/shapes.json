@@ -1,1474 +1,2045 @@
 {
- "md": {
-  "name": "Maryland",
-  "source": "us-atlas (Census Bureau TIGER/Line, via npm registry.npmjs.org)",
-  "counties": [
-   {
-    "id": "24043",
-    "name": "Washington"
-   },
-   {
-    "id": "24001",
-    "name": "Allegany"
-   },
-   {
-    "id": "24011",
-    "name": "Caroline"
-   },
-   {
-    "id": "24045",
-    "name": "Wicomico"
-   },
-   {
-    "id": "24037",
-    "name": "St. Mary's"
-   },
-   {
-    "id": "24013",
-    "name": "Carroll"
-   },
-   {
-    "id": "24019",
-    "name": "Dorchester"
-   },
-   {
-    "id": "24023",
-    "name": "Garrett"
-   },
-   {
-    "id": "24029",
-    "name": "Kent"
-   },
-   {
-    "id": "24031",
-    "name": "Montgomery"
-   },
-   {
-    "id": "24041",
-    "name": "Talbot"
-   },
-   {
-    "id": "24510",
-    "name": "Baltimore"
-   },
-   {
-    "id": "24015",
-    "name": "Cecil"
-   },
-   {
-    "id": "24027",
-    "name": "Howard"
-   },
-   {
-    "id": "24009",
-    "name": "Calvert"
-   },
-   {
-    "id": "24035",
-    "name": "Queen Anne's"
-   },
-   {
-    "id": "24017",
-    "name": "Charles"
-   },
-   {
-    "id": "24039",
-    "name": "Somerset"
-   },
-   {
-    "id": "24047",
-    "name": "Worcester"
-   },
-   {
-    "id": "24003",
-    "name": "Anne Arundel"
-   },
-   {
-    "id": "24025",
-    "name": "Harford"
-   },
-   {
-    "id": "24005",
-    "name": "Baltimore"
-   },
-   {
-    "id": "24021",
-    "name": "Frederick"
-   },
-   {
-    "id": "24033",
-    "name": "Prince George's"
-   }
-  ],
-  "real_adjacency_edges": [
-   [
-    0,
-    1
-   ],
-   [
-    0,
-    22
-   ],
-   [
-    1,
-    7
-   ],
-   [
-    2,
-    6
-   ],
-   [
-    2,
-    10
-   ],
-   [
-    2,
-    15
-   ],
-   [
-    3,
-    6
-   ],
-   [
-    3,
-    17
-   ],
-   [
-    3,
-    18
-   ],
-   [
-    4,
-    14
-   ],
-   [
-    4,
-    16
-   ],
-   [
-    5,
-    13
-   ],
-   [
-    5,
-    21
-   ],
-   [
-    5,
-    22
-   ],
-   [
-    6,
-    10
-   ],
-   [
-    6,
-    17
-   ],
-   [
-    8,
-    12
-   ],
-   [
-    8,
-    15
-   ],
-   [
-    9,
-    13
-   ],
-   [
-    9,
-    22
-   ],
-   [
-    9,
-    23
-   ],
-   [
-    10,
-    15
-   ],
-   [
-    11,
-    19
-   ],
-   [
-    11,
-    21
-   ],
-   [
-    12,
-    20
-   ],
-   [
-    13,
-    19
-   ],
-   [
-    13,
-    21
-   ],
-   [
-    13,
-    22
-   ],
-   [
-    13,
-    23
-   ],
-   [
-    14,
-    16
-   ],
-   [
-    14,
-    19
-   ],
-   [
-    14,
-    23
-   ],
-   [
-    16,
-    23
-   ],
-   [
-    17,
-    18
-   ],
-   [
-    19,
-    21
-   ],
-   [
-    19,
-    23
-   ],
-   [
-    20,
-    21
-   ]
-  ],
-  "grid_cols": 93,
-  "grid_rows": 49,
-  "maze_cells": 1533
- },
- "de": {
-  "name": "Delaware",
-  "source": "us-atlas (Census Bureau TIGER/Line, via npm registry.npmjs.org)",
-  "counties": [
-   {
-    "id": "10003",
-    "name": "New Castle"
-   },
-   {
-    "id": "10001",
-    "name": "Kent"
-   },
-   {
-    "id": "10005",
-    "name": "Sussex"
-   }
-  ],
-  "real_adjacency_edges": [
-   [
-    0,
-    1
-   ],
-   [
-    1,
-    2
-   ]
-  ],
-  "grid_cols": 43,
-  "grid_rows": 104,
-  "maze_cells": 2382
- },
- "nj": {
-  "name": "New Jersey",
-  "source": "us-atlas (Census Bureau TIGER/Line, via npm registry.npmjs.org)",
-  "counties": [
-   {
-    "id": "34011",
-    "name": "Cumberland"
-   },
-   {
-    "id": "34019",
-    "name": "Hunterdon"
-   },
-   {
-    "id": "34041",
-    "name": "Warren"
-   },
-   {
-    "id": "34035",
-    "name": "Somerset"
-   },
-   {
-    "id": "34029",
-    "name": "Ocean"
-   },
-   {
-    "id": "34003",
-    "name": "Bergen"
-   },
-   {
-    "id": "34023",
-    "name": "Middlesex"
-   },
-   {
-    "id": "34001",
-    "name": "Atlantic"
-   },
-   {
-    "id": "34005",
-    "name": "Burlington"
-   },
-   {
-    "id": "34009",
-    "name": "Cape May"
-   },
-   {
-    "id": "34013",
-    "name": "Essex"
-   },
-   {
-    "id": "34021",
-    "name": "Mercer"
-   },
-   {
-    "id": "34017",
-    "name": "Hudson"
-   },
-   {
-    "id": "34025",
-    "name": "Monmouth"
-   },
-   {
-    "id": "34037",
-    "name": "Sussex"
-   },
-   {
-    "id": "34039",
-    "name": "Union"
-   },
-   {
-    "id": "34027",
-    "name": "Morris"
-   },
-   {
-    "id": "34007",
-    "name": "Camden"
-   },
-   {
-    "id": "34033",
-    "name": "Salem"
-   },
-   {
-    "id": "34015",
-    "name": "Gloucester"
-   },
-   {
-    "id": "34031",
-    "name": "Passaic"
-   }
-  ],
-  "real_adjacency_edges": [
-   [
-    0,
-    7
-   ],
-   [
-    0,
-    9
-   ],
-   [
-    0,
-    18
-   ],
-   [
-    0,
-    19
-   ],
-   [
-    1,
-    2
-   ],
-   [
-    1,
-    3
-   ],
-   [
-    1,
-    11
-   ],
-   [
-    1,
-    16
-   ],
-   [
-    2,
-    14
-   ],
-   [
-    2,
-    16
-   ],
-   [
-    3,
-    6
-   ],
-   [
-    3,
-    11
-   ],
-   [
-    3,
-    15
-   ],
-   [
-    3,
-    16
-   ],
-   [
-    4,
-    7
-   ],
-   [
-    4,
-    8
-   ],
-   [
-    4,
-    13
-   ],
-   [
-    5,
-    10
-   ],
-   [
-    5,
-    12
-   ],
-   [
-    5,
-    20
-   ],
-   [
-    6,
-    11
-   ],
-   [
-    6,
-    13
-   ],
-   [
-    6,
-    15
-   ],
-   [
-    7,
-    8
-   ],
-   [
-    7,
-    9
-   ],
-   [
-    7,
-    17
-   ],
-   [
-    7,
-    19
-   ],
-   [
-    8,
-    11
-   ],
-   [
-    8,
-    13
-   ],
-   [
-    8,
-    17
-   ],
-   [
-    10,
-    12
-   ],
-   [
-    10,
-    15
-   ],
-   [
-    10,
-    16
-   ],
-   [
-    10,
-    20
-   ],
-   [
-    11,
-    13
-   ],
-   [
-    12,
-    15
-   ],
-   [
-    14,
-    16
-   ],
-   [
-    14,
-    20
-   ],
-   [
-    15,
-    16
-   ],
-   [
-    16,
-    20
-   ],
-   [
-    17,
-    19
-   ],
-   [
-    18,
-    19
-   ]
-  ],
-  "grid_cols": 49,
-  "grid_rows": 94,
-  "maze_cells": 2205
- },
- "ny": {
-  "name": "New York",
-  "source": "us-atlas (Census Bureau TIGER/Line, via npm registry.npmjs.org)",
-  "counties": [
-   {
-    "id": "36095",
-    "name": "Schoharie"
-   },
-   {
-    "id": "36099",
-    "name": "Seneca"
-   },
-   {
-    "id": "36073",
-    "name": "Orleans"
-   },
-   {
-    "id": "36117",
-    "name": "Wayne"
-   },
-   {
-    "id": "36039",
-    "name": "Greene"
-   },
-   {
-    "id": "36003",
-    "name": "Allegany"
-   },
-   {
-    "id": "36075",
-    "name": "Oswego"
-   },
-   {
-    "id": "36059",
-    "name": "Nassau"
-   },
-   {
-    "id": "36055",
-    "name": "Monroe"
-   },
-   {
-    "id": "36043",
-    "name": "Herkimer"
-   },
-   {
-    "id": "36061",
-    "name": "New York"
-   },
-   {
-    "id": "36089",
-    "name": "St. Lawrence"
-   },
-   {
-    "id": "36071",
-    "name": "Orange"
-   },
-   {
-    "id": "36109",
-    "name": "Tompkins"
-   },
-   {
-    "id": "36067",
-    "name": "Onondaga"
-   },
-   {
-    "id": "36001",
-    "name": "Albany"
-   },
-   {
-    "id": "36103",
-    "name": "Suffolk"
-   },
-   {
-    "id": "36045",
-    "name": "Jefferson"
-   },
-   {
-    "id": "36051",
-    "name": "Livingston"
-   },
-   {
-    "id": "36121",
-    "name": "Wyoming"
-   },
-   {
-    "id": "36097",
-    "name": "Schuyler"
-   },
-   {
-    "id": "36107",
-    "name": "Tioga"
-   },
-   {
-    "id": "36015",
-    "name": "Chemung"
-   },
-   {
-    "id": "36119",
-    "name": "Westchester"
-   },
-   {
-    "id": "36063",
-    "name": "Niagara"
-   },
-   {
-    "id": "36065",
-    "name": "Oneida"
-   },
-   {
-    "id": "36031",
-    "name": "Essex"
-   },
-   {
-    "id": "36077",
-    "name": "Otsego"
-   },
-   {
-    "id": "36041",
-    "name": "Hamilton"
-   },
-   {
-    "id": "36057",
-    "name": "Montgomery"
-   },
-   {
-    "id": "36033",
-    "name": "Franklin"
-   },
-   {
-    "id": "36049",
-    "name": "Lewis"
-   },
-   {
-    "id": "36007",
-    "name": "Broome"
-   },
-   {
-    "id": "36093",
-    "name": "Schenectady"
-   },
-   {
-    "id": "36101",
-    "name": "Steuben"
-   },
-   {
-    "id": "36017",
-    "name": "Chenango"
-   },
-   {
-    "id": "36105",
-    "name": "Sullivan"
-   },
-   {
-    "id": "36079",
-    "name": "Putnam"
-   },
-   {
-    "id": "36087",
-    "name": "Rockland"
-   },
-   {
-    "id": "36021",
-    "name": "Columbia"
-   },
-   {
-    "id": "36019",
-    "name": "Clinton"
-   },
-   {
-    "id": "36047",
-    "name": "Kings"
-   },
-   {
-    "id": "36009",
-    "name": "Cattaraugus"
-   },
-   {
-    "id": "36013",
-    "name": "Chautauqua"
-   },
-   {
-    "id": "36081",
-    "name": "Queens"
-   },
-   {
-    "id": "36083",
-    "name": "Rensselaer"
-   },
-   {
-    "id": "36085",
-    "name": "Richmond"
-   },
-   {
-    "id": "36111",
-    "name": "Ulster"
-   },
-   {
-    "id": "36005",
-    "name": "Bronx"
-   },
-   {
-    "id": "36091",
-    "name": "Saratoga"
-   },
-   {
-    "id": "36035",
-    "name": "Fulton"
-   },
-   {
-    "id": "36027",
-    "name": "Dutchess"
-   },
-   {
-    "id": "36011",
-    "name": "Cayuga"
-   },
-   {
-    "id": "36029",
-    "name": "Erie"
-   },
-   {
-    "id": "36023",
-    "name": "Cortland"
-   },
-   {
-    "id": "36053",
-    "name": "Madison"
-   },
-   {
-    "id": "36115",
-    "name": "Washington"
-   },
-   {
-    "id": "36037",
-    "name": "Genesee"
-   },
-   {
-    "id": "36113",
-    "name": "Warren"
-   },
-   {
-    "id": "36025",
-    "name": "Delaware"
-   },
-   {
-    "id": "36123",
-    "name": "Yates"
-   },
-   {
-    "id": "36069",
-    "name": "Ontario"
-   }
-  ],
-  "real_adjacency_edges": [
-   [
-    0,
-    4
-   ],
-   [
-    0,
-    15
-   ],
-   [
-    0,
-    27
-   ],
-   [
-    0,
-    29
-   ],
-   [
-    0,
-    33
-   ],
-   [
-    0,
-    59
-   ],
-   [
-    1,
-    3
-   ],
-   [
-    1,
-    13
-   ],
-   [
-    1,
-    20
-   ],
-   [
-    1,
-    52
-   ],
-   [
-    1,
-    60
-   ],
-   [
-    1,
-    61
-   ],
-   [
-    2,
-    8
-   ],
-   [
-    2,
-    24
-   ],
-   [
-    2,
-    57
-   ],
-   [
-    3,
-    8
-   ],
-   [
-    3,
-    52
-   ],
-   [
-    3,
-    61
-   ],
-   [
-    4,
-    15
-   ],
-   [
-    4,
-    39
-   ],
-   [
-    4,
-    47
-   ],
-   [
-    4,
-    59
-   ],
-   [
-    5,
-    18
-   ],
-   [
-    5,
-    19
-   ],
-   [
-    5,
-    34
-   ],
-   [
-    5,
-    42
-   ],
-   [
-    6,
-    14
-   ],
-   [
-    6,
-    17
-   ],
-   [
-    6,
-    25
-   ],
-   [
-    6,
-    31
-   ],
-   [
-    6,
-    52
-   ],
-   [
-    6,
-    55
-   ],
-   [
-    7,
-    16
-   ],
-   [
-    7,
-    44
-   ],
-   [
-    8,
-    18
-   ],
-   [
-    8,
-    57
-   ],
-   [
-    8,
-    61
-   ],
-   [
-    9,
-    11
-   ],
-   [
-    9,
-    25
-   ],
-   [
-    9,
-    27
-   ],
-   [
-    9,
-    28
-   ],
-   [
-    9,
-    29
-   ],
-   [
-    9,
-    31
-   ],
-   [
-    9,
-    50
-   ],
-   [
-    10,
-    41
-   ],
-   [
-    10,
-    44
-   ],
-   [
-    10,
-    48
-   ],
-   [
-    11,
-    17
-   ],
-   [
-    11,
-    28
-   ],
-   [
-    11,
-    30
-   ],
-   [
-    11,
-    31
-   ],
-   [
-    12,
-    36
-   ],
-   [
-    12,
-    37
-   ],
-   [
-    12,
-    38
-   ],
-   [
-    12,
-    47
-   ],
-   [
-    12,
-    51
-   ],
-   [
-    13,
-    20
-   ],
-   [
-    13,
-    21
-   ],
-   [
-    13,
-    22
-   ],
-   [
-    13,
-    52
-   ],
-   [
-    13,
-    54
-   ],
-   [
-    14,
-    52
-   ],
-   [
-    14,
-    54
-   ],
-   [
-    14,
-    55
-   ],
-   [
-    15,
-    33
-   ],
-   [
-    15,
-    45
-   ],
-   [
-    15,
-    49
-   ],
-   [
-    17,
-    31
-   ],
-   [
-    18,
-    19
-   ],
-   [
-    18,
-    34
-   ],
-   [
-    18,
-    57
-   ],
-   [
-    18,
-    61
-   ],
-   [
-    19,
-    42
-   ],
-   [
-    19,
-    53
-   ],
-   [
-    19,
-    57
-   ],
-   [
-    20,
-    22
-   ],
-   [
-    20,
-    34
-   ],
-   [
-    20,
-    60
-   ],
-   [
-    21,
-    22
-   ],
-   [
-    21,
-    32
-   ],
-   [
-    21,
-    54
-   ],
-   [
-    22,
-    34
-   ],
-   [
-    23,
-    37
-   ],
-   [
-    23,
-    38
-   ],
-   [
-    23,
-    48
-   ],
-   [
-    24,
-    53
-   ],
-   [
-    24,
-    57
-   ],
-   [
-    25,
-    27
-   ],
-   [
-    25,
-    31
-   ],
-   [
-    25,
-    55
-   ],
-   [
-    26,
-    28
-   ],
-   [
-    26,
-    30
-   ],
-   [
-    26,
-    40
-   ],
-   [
-    26,
-    56
-   ],
-   [
-    26,
-    58
-   ],
-   [
-    27,
-    29
-   ],
-   [
-    27,
-    35
-   ],
-   [
-    27,
-    55
-   ],
-   [
-    27,
-    59
-   ],
-   [
-    28,
-    30
-   ],
-   [
-    28,
-    49
-   ],
-   [
-    28,
-    50
-   ],
-   [
-    28,
-    58
-   ],
-   [
-    29,
-    33
-   ],
-   [
-    29,
-    49
-   ],
-   [
-    29,
-    50
-   ],
-   [
-    30,
-    40
-   ],
-   [
-    32,
-    35
-   ],
-   [
-    32,
-    54
-   ],
-   [
-    32,
-    59
-   ],
-   [
-    33,
-    49
-   ],
-   [
-    34,
-    60
-   ],
-   [
-    34,
-    61
-   ],
-   [
-    35,
-    54
-   ],
-   [
-    35,
-    55
-   ],
-   [
-    35,
-    59
-   ],
-   [
-    36,
-    47
-   ],
-   [
-    36,
-    59
-   ],
-   [
-    37,
-    38
-   ],
-   [
-    37,
-    51
-   ],
-   [
-    39,
-    45
-   ],
-   [
-    39,
-    47
-   ],
-   [
-    39,
-    51
-   ],
-   [
-    41,
-    44
-   ],
-   [
-    42,
-    43
-   ],
-   [
-    42,
-    53
-   ],
-   [
-    43,
-    53
-   ],
-   [
-    44,
-    48
-   ],
-   [
-    45,
-    49
-   ],
-   [
-    45,
-    56
-   ],
-   [
-    47,
-    51
-   ],
-   [
-    47,
-    59
-   ],
-   [
-    49,
-    50
-   ],
-   [
-    49,
-    56
-   ],
-   [
-    49,
-    58
-   ],
-   [
-    52,
-    54
-   ],
-   [
-    53,
-    57
-   ],
-   [
-    54,
-    55
-   ],
-   [
-    56,
-    58
-   ],
-   [
-    60,
-    61
-   ]
-  ],
-  "grid_cols": 76,
-  "grid_rows": 59,
-  "maze_cells": 1721
- },
- "qc": {
-  "name": "Montreal / Quebec (maple leaf stand-in)",
-  "source": "stylized silhouette, not survey data (no Quebec boundary dataset was reachable)",
-  "poly": [
-   [
-    50,
-    4
-   ],
-   [
-    58,
-    22
-   ],
-   [
-    76,
-    14
-   ],
-   [
-    70,
-    32
-   ],
-   [
-    88,
-    30
-   ],
-   [
-    76,
-    46
-   ],
-   [
-    94,
-    52
-   ],
-   [
-    78,
-    58
-   ],
-   [
-    84,
-    76
-   ],
-   [
-    64,
-    68
-   ],
-   [
-    66,
-    90
-   ],
-   [
-    54,
-    76
-   ],
-   [
-    50,
-    98
-   ],
-   [
-    46,
-    76
-   ],
-   [
-    34,
-    90
-   ],
-   [
-    36,
-    68
-   ],
-   [
-    16,
-    76
-   ],
-   [
-    22,
-    58
-   ],
-   [
-    6,
-    52
-   ],
-   [
-    24,
-    46
-   ],
-   [
-    12,
-    30
-   ],
-   [
-    30,
-    32
-   ],
-   [
-    24,
-    14
-   ],
-   [
-    42,
-    22
-   ]
-  ],
-  "grid_cols": 38,
-  "grid_rows": 42
- }
+  "md": {
+    "name": "Maryland",
+    "source": "us-atlas (Census Bureau TIGER/Line, via npm registry.npmjs.org)",
+    "counties": [
+      {
+        "id": "24043",
+        "name": "Washington"
+      },
+      {
+        "id": "24001",
+        "name": "Allegany"
+      },
+      {
+        "id": "24011",
+        "name": "Caroline"
+      },
+      {
+        "id": "24045",
+        "name": "Wicomico"
+      },
+      {
+        "id": "24037",
+        "name": "St. Mary's"
+      },
+      {
+        "id": "24013",
+        "name": "Carroll"
+      },
+      {
+        "id": "24019",
+        "name": "Dorchester"
+      },
+      {
+        "id": "24023",
+        "name": "Garrett"
+      },
+      {
+        "id": "24029",
+        "name": "Kent"
+      },
+      {
+        "id": "24031",
+        "name": "Montgomery"
+      },
+      {
+        "id": "24041",
+        "name": "Talbot"
+      },
+      {
+        "id": "24510",
+        "name": "Baltimore"
+      },
+      {
+        "id": "24015",
+        "name": "Cecil"
+      },
+      {
+        "id": "24027",
+        "name": "Howard"
+      },
+      {
+        "id": "24009",
+        "name": "Calvert"
+      },
+      {
+        "id": "24035",
+        "name": "Queen Anne's"
+      },
+      {
+        "id": "24017",
+        "name": "Charles"
+      },
+      {
+        "id": "24039",
+        "name": "Somerset"
+      },
+      {
+        "id": "24047",
+        "name": "Worcester"
+      },
+      {
+        "id": "24003",
+        "name": "Anne Arundel"
+      },
+      {
+        "id": "24025",
+        "name": "Harford"
+      },
+      {
+        "id": "24005",
+        "name": "Baltimore"
+      },
+      {
+        "id": "24021",
+        "name": "Frederick"
+      },
+      {
+        "id": "24033",
+        "name": "Prince George's"
+      }
+    ],
+    "real_adjacency_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        22
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        2,
+        15
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        3,
+        17
+      ],
+      [
+        3,
+        18
+      ],
+      [
+        4,
+        14
+      ],
+      [
+        4,
+        16
+      ],
+      [
+        5,
+        13
+      ],
+      [
+        5,
+        21
+      ],
+      [
+        5,
+        22
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        6,
+        17
+      ],
+      [
+        8,
+        12
+      ],
+      [
+        8,
+        15
+      ],
+      [
+        9,
+        13
+      ],
+      [
+        9,
+        22
+      ],
+      [
+        9,
+        23
+      ],
+      [
+        10,
+        15
+      ],
+      [
+        11,
+        19
+      ],
+      [
+        11,
+        21
+      ],
+      [
+        12,
+        20
+      ],
+      [
+        13,
+        19
+      ],
+      [
+        13,
+        21
+      ],
+      [
+        13,
+        22
+      ],
+      [
+        13,
+        23
+      ],
+      [
+        14,
+        16
+      ],
+      [
+        14,
+        19
+      ],
+      [
+        14,
+        23
+      ],
+      [
+        16,
+        23
+      ],
+      [
+        17,
+        18
+      ],
+      [
+        19,
+        21
+      ],
+      [
+        19,
+        23
+      ],
+      [
+        20,
+        21
+      ]
+    ],
+    "grid_cols": 93,
+    "grid_rows": 49,
+    "maze_cells": 1533
+  },
+  "de": {
+    "name": "Delaware",
+    "source": "us-atlas (Census Bureau TIGER/Line, via npm registry.npmjs.org)",
+    "counties": [
+      {
+        "id": "10003",
+        "name": "New Castle"
+      },
+      {
+        "id": "10001",
+        "name": "Kent"
+      },
+      {
+        "id": "10005",
+        "name": "Sussex"
+      }
+    ],
+    "real_adjacency_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "grid_cols": 43,
+    "grid_rows": 104,
+    "maze_cells": 2382
+  },
+  "nj": {
+    "name": "New Jersey",
+    "source": "us-atlas (Census Bureau TIGER/Line, via npm registry.npmjs.org)",
+    "counties": [
+      {
+        "id": "34011",
+        "name": "Cumberland"
+      },
+      {
+        "id": "34019",
+        "name": "Hunterdon"
+      },
+      {
+        "id": "34041",
+        "name": "Warren"
+      },
+      {
+        "id": "34035",
+        "name": "Somerset"
+      },
+      {
+        "id": "34029",
+        "name": "Ocean"
+      },
+      {
+        "id": "34003",
+        "name": "Bergen"
+      },
+      {
+        "id": "34023",
+        "name": "Middlesex"
+      },
+      {
+        "id": "34001",
+        "name": "Atlantic"
+      },
+      {
+        "id": "34005",
+        "name": "Burlington"
+      },
+      {
+        "id": "34009",
+        "name": "Cape May"
+      },
+      {
+        "id": "34013",
+        "name": "Essex"
+      },
+      {
+        "id": "34021",
+        "name": "Mercer"
+      },
+      {
+        "id": "34017",
+        "name": "Hudson"
+      },
+      {
+        "id": "34025",
+        "name": "Monmouth"
+      },
+      {
+        "id": "34037",
+        "name": "Sussex"
+      },
+      {
+        "id": "34039",
+        "name": "Union"
+      },
+      {
+        "id": "34027",
+        "name": "Morris"
+      },
+      {
+        "id": "34007",
+        "name": "Camden"
+      },
+      {
+        "id": "34033",
+        "name": "Salem"
+      },
+      {
+        "id": "34015",
+        "name": "Gloucester"
+      },
+      {
+        "id": "34031",
+        "name": "Passaic"
+      }
+    ],
+    "real_adjacency_edges": [
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        0,
+        18
+      ],
+      [
+        0,
+        19
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        11
+      ],
+      [
+        1,
+        16
+      ],
+      [
+        2,
+        14
+      ],
+      [
+        2,
+        16
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        3,
+        11
+      ],
+      [
+        3,
+        15
+      ],
+      [
+        3,
+        16
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        4,
+        13
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        5,
+        12
+      ],
+      [
+        5,
+        20
+      ],
+      [
+        6,
+        11
+      ],
+      [
+        6,
+        13
+      ],
+      [
+        6,
+        15
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        7,
+        17
+      ],
+      [
+        7,
+        19
+      ],
+      [
+        8,
+        11
+      ],
+      [
+        8,
+        13
+      ],
+      [
+        8,
+        17
+      ],
+      [
+        10,
+        12
+      ],
+      [
+        10,
+        15
+      ],
+      [
+        10,
+        16
+      ],
+      [
+        10,
+        20
+      ],
+      [
+        11,
+        13
+      ],
+      [
+        12,
+        15
+      ],
+      [
+        14,
+        16
+      ],
+      [
+        14,
+        20
+      ],
+      [
+        15,
+        16
+      ],
+      [
+        16,
+        20
+      ],
+      [
+        17,
+        19
+      ],
+      [
+        18,
+        19
+      ]
+    ],
+    "grid_cols": 49,
+    "grid_rows": 94,
+    "maze_cells": 2205
+  },
+  "ny": {
+    "name": "New York",
+    "source": "us-atlas (Census Bureau TIGER/Line, via npm registry.npmjs.org)",
+    "counties": [
+      {
+        "id": "36095",
+        "name": "Schoharie"
+      },
+      {
+        "id": "36099",
+        "name": "Seneca"
+      },
+      {
+        "id": "36073",
+        "name": "Orleans"
+      },
+      {
+        "id": "36117",
+        "name": "Wayne"
+      },
+      {
+        "id": "36039",
+        "name": "Greene"
+      },
+      {
+        "id": "36003",
+        "name": "Allegany"
+      },
+      {
+        "id": "36075",
+        "name": "Oswego"
+      },
+      {
+        "id": "36059",
+        "name": "Nassau"
+      },
+      {
+        "id": "36055",
+        "name": "Monroe"
+      },
+      {
+        "id": "36043",
+        "name": "Herkimer"
+      },
+      {
+        "id": "36061",
+        "name": "New York"
+      },
+      {
+        "id": "36089",
+        "name": "St. Lawrence"
+      },
+      {
+        "id": "36071",
+        "name": "Orange"
+      },
+      {
+        "id": "36109",
+        "name": "Tompkins"
+      },
+      {
+        "id": "36067",
+        "name": "Onondaga"
+      },
+      {
+        "id": "36001",
+        "name": "Albany"
+      },
+      {
+        "id": "36103",
+        "name": "Suffolk"
+      },
+      {
+        "id": "36045",
+        "name": "Jefferson"
+      },
+      {
+        "id": "36051",
+        "name": "Livingston"
+      },
+      {
+        "id": "36121",
+        "name": "Wyoming"
+      },
+      {
+        "id": "36097",
+        "name": "Schuyler"
+      },
+      {
+        "id": "36107",
+        "name": "Tioga"
+      },
+      {
+        "id": "36015",
+        "name": "Chemung"
+      },
+      {
+        "id": "36119",
+        "name": "Westchester"
+      },
+      {
+        "id": "36063",
+        "name": "Niagara"
+      },
+      {
+        "id": "36065",
+        "name": "Oneida"
+      },
+      {
+        "id": "36031",
+        "name": "Essex"
+      },
+      {
+        "id": "36077",
+        "name": "Otsego"
+      },
+      {
+        "id": "36041",
+        "name": "Hamilton"
+      },
+      {
+        "id": "36057",
+        "name": "Montgomery"
+      },
+      {
+        "id": "36033",
+        "name": "Franklin"
+      },
+      {
+        "id": "36049",
+        "name": "Lewis"
+      },
+      {
+        "id": "36007",
+        "name": "Broome"
+      },
+      {
+        "id": "36093",
+        "name": "Schenectady"
+      },
+      {
+        "id": "36101",
+        "name": "Steuben"
+      },
+      {
+        "id": "36017",
+        "name": "Chenango"
+      },
+      {
+        "id": "36105",
+        "name": "Sullivan"
+      },
+      {
+        "id": "36079",
+        "name": "Putnam"
+      },
+      {
+        "id": "36087",
+        "name": "Rockland"
+      },
+      {
+        "id": "36021",
+        "name": "Columbia"
+      },
+      {
+        "id": "36019",
+        "name": "Clinton"
+      },
+      {
+        "id": "36047",
+        "name": "Kings"
+      },
+      {
+        "id": "36009",
+        "name": "Cattaraugus"
+      },
+      {
+        "id": "36013",
+        "name": "Chautauqua"
+      },
+      {
+        "id": "36081",
+        "name": "Queens"
+      },
+      {
+        "id": "36083",
+        "name": "Rensselaer"
+      },
+      {
+        "id": "36085",
+        "name": "Richmond"
+      },
+      {
+        "id": "36111",
+        "name": "Ulster"
+      },
+      {
+        "id": "36005",
+        "name": "Bronx"
+      },
+      {
+        "id": "36091",
+        "name": "Saratoga"
+      },
+      {
+        "id": "36035",
+        "name": "Fulton"
+      },
+      {
+        "id": "36027",
+        "name": "Dutchess"
+      },
+      {
+        "id": "36011",
+        "name": "Cayuga"
+      },
+      {
+        "id": "36029",
+        "name": "Erie"
+      },
+      {
+        "id": "36023",
+        "name": "Cortland"
+      },
+      {
+        "id": "36053",
+        "name": "Madison"
+      },
+      {
+        "id": "36115",
+        "name": "Washington"
+      },
+      {
+        "id": "36037",
+        "name": "Genesee"
+      },
+      {
+        "id": "36113",
+        "name": "Warren"
+      },
+      {
+        "id": "36025",
+        "name": "Delaware"
+      },
+      {
+        "id": "36123",
+        "name": "Yates"
+      },
+      {
+        "id": "36069",
+        "name": "Ontario"
+      }
+    ],
+    "real_adjacency_edges": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        15
+      ],
+      [
+        0,
+        27
+      ],
+      [
+        0,
+        29
+      ],
+      [
+        0,
+        33
+      ],
+      [
+        0,
+        59
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        13
+      ],
+      [
+        1,
+        20
+      ],
+      [
+        1,
+        52
+      ],
+      [
+        1,
+        60
+      ],
+      [
+        1,
+        61
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        2,
+        24
+      ],
+      [
+        2,
+        57
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        3,
+        52
+      ],
+      [
+        3,
+        61
+      ],
+      [
+        4,
+        15
+      ],
+      [
+        4,
+        39
+      ],
+      [
+        4,
+        47
+      ],
+      [
+        4,
+        59
+      ],
+      [
+        5,
+        18
+      ],
+      [
+        5,
+        19
+      ],
+      [
+        5,
+        34
+      ],
+      [
+        5,
+        42
+      ],
+      [
+        6,
+        14
+      ],
+      [
+        6,
+        17
+      ],
+      [
+        6,
+        25
+      ],
+      [
+        6,
+        31
+      ],
+      [
+        6,
+        52
+      ],
+      [
+        6,
+        55
+      ],
+      [
+        7,
+        16
+      ],
+      [
+        7,
+        44
+      ],
+      [
+        8,
+        18
+      ],
+      [
+        8,
+        57
+      ],
+      [
+        8,
+        61
+      ],
+      [
+        9,
+        11
+      ],
+      [
+        9,
+        25
+      ],
+      [
+        9,
+        27
+      ],
+      [
+        9,
+        28
+      ],
+      [
+        9,
+        29
+      ],
+      [
+        9,
+        31
+      ],
+      [
+        9,
+        50
+      ],
+      [
+        10,
+        41
+      ],
+      [
+        10,
+        44
+      ],
+      [
+        10,
+        48
+      ],
+      [
+        11,
+        17
+      ],
+      [
+        11,
+        28
+      ],
+      [
+        11,
+        30
+      ],
+      [
+        11,
+        31
+      ],
+      [
+        12,
+        36
+      ],
+      [
+        12,
+        37
+      ],
+      [
+        12,
+        38
+      ],
+      [
+        12,
+        47
+      ],
+      [
+        12,
+        51
+      ],
+      [
+        13,
+        20
+      ],
+      [
+        13,
+        21
+      ],
+      [
+        13,
+        22
+      ],
+      [
+        13,
+        52
+      ],
+      [
+        13,
+        54
+      ],
+      [
+        14,
+        52
+      ],
+      [
+        14,
+        54
+      ],
+      [
+        14,
+        55
+      ],
+      [
+        15,
+        33
+      ],
+      [
+        15,
+        45
+      ],
+      [
+        15,
+        49
+      ],
+      [
+        17,
+        31
+      ],
+      [
+        18,
+        19
+      ],
+      [
+        18,
+        34
+      ],
+      [
+        18,
+        57
+      ],
+      [
+        18,
+        61
+      ],
+      [
+        19,
+        42
+      ],
+      [
+        19,
+        53
+      ],
+      [
+        19,
+        57
+      ],
+      [
+        20,
+        22
+      ],
+      [
+        20,
+        34
+      ],
+      [
+        20,
+        60
+      ],
+      [
+        21,
+        22
+      ],
+      [
+        21,
+        32
+      ],
+      [
+        21,
+        54
+      ],
+      [
+        22,
+        34
+      ],
+      [
+        23,
+        37
+      ],
+      [
+        23,
+        38
+      ],
+      [
+        23,
+        48
+      ],
+      [
+        24,
+        53
+      ],
+      [
+        24,
+        57
+      ],
+      [
+        25,
+        27
+      ],
+      [
+        25,
+        31
+      ],
+      [
+        25,
+        55
+      ],
+      [
+        26,
+        28
+      ],
+      [
+        26,
+        30
+      ],
+      [
+        26,
+        40
+      ],
+      [
+        26,
+        56
+      ],
+      [
+        26,
+        58
+      ],
+      [
+        27,
+        29
+      ],
+      [
+        27,
+        35
+      ],
+      [
+        27,
+        55
+      ],
+      [
+        27,
+        59
+      ],
+      [
+        28,
+        30
+      ],
+      [
+        28,
+        49
+      ],
+      [
+        28,
+        50
+      ],
+      [
+        28,
+        58
+      ],
+      [
+        29,
+        33
+      ],
+      [
+        29,
+        49
+      ],
+      [
+        29,
+        50
+      ],
+      [
+        30,
+        40
+      ],
+      [
+        32,
+        35
+      ],
+      [
+        32,
+        54
+      ],
+      [
+        32,
+        59
+      ],
+      [
+        33,
+        49
+      ],
+      [
+        34,
+        60
+      ],
+      [
+        34,
+        61
+      ],
+      [
+        35,
+        54
+      ],
+      [
+        35,
+        55
+      ],
+      [
+        35,
+        59
+      ],
+      [
+        36,
+        47
+      ],
+      [
+        36,
+        59
+      ],
+      [
+        37,
+        38
+      ],
+      [
+        37,
+        51
+      ],
+      [
+        39,
+        45
+      ],
+      [
+        39,
+        47
+      ],
+      [
+        39,
+        51
+      ],
+      [
+        41,
+        44
+      ],
+      [
+        42,
+        43
+      ],
+      [
+        42,
+        53
+      ],
+      [
+        43,
+        53
+      ],
+      [
+        44,
+        48
+      ],
+      [
+        45,
+        49
+      ],
+      [
+        45,
+        56
+      ],
+      [
+        47,
+        51
+      ],
+      [
+        47,
+        59
+      ],
+      [
+        49,
+        50
+      ],
+      [
+        49,
+        56
+      ],
+      [
+        49,
+        58
+      ],
+      [
+        52,
+        54
+      ],
+      [
+        53,
+        57
+      ],
+      [
+        54,
+        55
+      ],
+      [
+        56,
+        58
+      ],
+      [
+        60,
+        61
+      ]
+    ],
+    "grid_cols": 76,
+    "grid_rows": 59,
+    "maze_cells": 1721
+  },
+  "qc": {
+    "name": "Québec (southern MRC corridor)",
+    "source": "highcharts/map-collection-dist ca-qc-all.topo.json (real MRC/TE boundaries), decoded via topojson; pulled via npm registry since statcan.gc.ca was not reachable from this network",
+    "excluded_regions": [
+      "Le Saguenay-et-son-Fjord",
+      "Minganie--Le Golfe-du-Saint-Laurent",
+      "Nord-du-Québec",
+      "Sept-Rivières--Caniapiscau"
+    ],
+    "manual_bridges": [
+      [
+        "L'Île-d'Orléans",
+        "La Côte-de-Beaupré"
+      ]
+    ],
+    "regions": [
+      {
+        "name": "Abitibi-Ouest"
+      },
+      {
+        "name": "Pontiac"
+      },
+      {
+        "name": "Témiscamingue"
+      },
+      {
+        "name": "La Tuque"
+      },
+      {
+        "name": "Matawinie"
+      },
+      {
+        "name": "Abitibi"
+      },
+      {
+        "name": "L'Île-d'Orléans"
+      },
+      {
+        "name": "Rivière-du-Loup"
+      },
+      {
+        "name": "Charlevoix-Est"
+      },
+      {
+        "name": "Charlevoix"
+      },
+      {
+        "name": "La Vallée-de-l'Or"
+      },
+      {
+        "name": "Memphrémagog"
+      },
+      {
+        "name": "Brome-Missisquoi"
+      },
+      {
+        "name": "La Côte-de-Beaupré"
+      },
+      {
+        "name": "Québec"
+      },
+      {
+        "name": "Lévis"
+      },
+      {
+        "name": "La Haute-Côte-Nord"
+      },
+      {
+        "name": "Longueuil"
+      },
+      {
+        "name": "Lajemmerais"
+      },
+      {
+        "name": "Roussillon"
+      },
+      {
+        "name": "Les Maskoutains"
+      },
+      {
+        "name": "Rouville"
+      },
+      {
+        "name": "La Vallée-du-Richelieu"
+      },
+      {
+        "name": "Rouyn-Noranda"
+      },
+      {
+        "name": "Le Haut-Richelieu"
+      },
+      {
+        "name": "Maskinongé"
+      },
+      {
+        "name": "Nicolet-Yamaska"
+      },
+      {
+        "name": "Pierre-De Saurel"
+      },
+      {
+        "name": "Les Collines-de-l'Outaouais"
+      },
+      {
+        "name": "Papineau"
+      },
+      {
+        "name": "La Vallée-de-la-Gatineau"
+      },
+      {
+        "name": "Bonaventure"
+      },
+      {
+        "name": "La Haute-Gaspésie"
+      },
+      {
+        "name": "Le Rocher-Percé"
+      },
+      {
+        "name": "La Côte-de-Gaspé"
+      },
+      {
+        "name": "La Mitis"
+      },
+      {
+        "name": "Matane"
+      },
+      {
+        "name": "Avignon"
+      },
+      {
+        "name": "Les Moulins"
+      },
+      {
+        "name": "Laval"
+      },
+      {
+        "name": "Montréal"
+      },
+      {
+        "name": "L'Assomption"
+      },
+      {
+        "name": "D'Autray"
+      },
+      {
+        "name": "Lotbinière"
+      },
+      {
+        "name": "Joliette"
+      },
+      {
+        "name": "Montcalm"
+      },
+      {
+        "name": "Les Jardins-de-Napierville"
+      },
+      {
+        "name": "Le Haut-Saint-Laurent"
+      },
+      {
+        "name": "Le Granit"
+      },
+      {
+        "name": "Les Appalaches"
+      },
+      {
+        "name": "L'Érable"
+      },
+      {
+        "name": "Beauce-Sartigan"
+      },
+      {
+        "name": "La Matapédia"
+      },
+      {
+        "name": "Maria-Chapdelaine"
+      },
+      {
+        "name": "Le Domaine-du-Roy"
+      },
+      {
+        "name": "La Jacques-Cartier"
+      },
+      {
+        "name": "Antoine-Labelle"
+      },
+      {
+        "name": "Lac-Saint-Jean-Est"
+      },
+      {
+        "name": "Les Laurentides"
+      },
+      {
+        "name": "La Nouvelle-Beauce"
+      },
+      {
+        "name": "Manicouagan"
+      },
+      {
+        "name": "Robert-Cliche"
+      },
+      {
+        "name": "Bellechasse"
+      },
+      {
+        "name": "Les Basques"
+      },
+      {
+        "name": "Rimouski-Neigette"
+      },
+      {
+        "name": "Témiscouata"
+      },
+      {
+        "name": "Kamouraska"
+      },
+      {
+        "name": "L'Islet"
+      },
+      {
+        "name": "Les Pays-d'en-Haut"
+      },
+      {
+        "name": "Argenteuil"
+      },
+      {
+        "name": "La Rivière-du-Nord"
+      },
+      {
+        "name": "Mirabel"
+      },
+      {
+        "name": "Thérèse-De Blainville"
+      },
+      {
+        "name": "Deux-Montagnes"
+      },
+      {
+        "name": "Vaudreuil-Soulanges"
+      },
+      {
+        "name": "Beauharnois-Salaberry"
+      },
+      {
+        "name": "Gatineau"
+      },
+      {
+        "name": "Les Etchemins"
+      },
+      {
+        "name": "Arthabaska"
+      },
+      {
+        "name": "Sherbrooke"
+      },
+      {
+        "name": "Bécancour"
+      },
+      {
+        "name": "Le Val-Saint-François"
+      },
+      {
+        "name": "Mékinac"
+      },
+      {
+        "name": "Francheville"
+      },
+      {
+        "name": "Portneuf"
+      },
+      {
+        "name": "Les Sources"
+      },
+      {
+        "name": "Shawinigan"
+      },
+      {
+        "name": "Le Haut-Saint-François"
+      },
+      {
+        "name": "La Haute-Yamaska"
+      },
+      {
+        "name": "Coaticook"
+      },
+      {
+        "name": "Acton"
+      },
+      {
+        "name": "Drummond"
+      },
+      {
+        "name": "Montmagny"
+      },
+      {
+        "name": "Les Îles-de-la-Madeleine"
+      }
+    ],
+    "real_adjacency_edges": [
+      [
+        "Abitibi-Ouest",
+        "Rouyn-Noranda"
+      ],
+      [
+        "Pontiac",
+        "Témiscamingue"
+      ],
+      [
+        "Pontiac",
+        "Les Collines-de-l'Outaouais"
+      ],
+      [
+        "La Tuque",
+        "Matawinie"
+      ],
+      [
+        "La Tuque",
+        "La Côte-de-Beaupré"
+      ],
+      [
+        "La Tuque",
+        "Le Domaine-du-Roy"
+      ],
+      [
+        "La Tuque",
+        "La Jacques-Cartier"
+      ],
+      [
+        "La Tuque",
+        "Lac-Saint-Jean-Est"
+      ],
+      [
+        "La Tuque",
+        "Portneuf"
+      ],
+      [
+        "Matawinie",
+        "Montcalm"
+      ],
+      [
+        "Matawinie",
+        "Mékinac"
+      ],
+      [
+        "Abitibi",
+        "La Vallée-de-l'Or"
+      ],
+      [
+        "L'Île-d'Orléans",
+        "La Côte-de-Beaupré"
+      ],
+      [
+        "Rivière-du-Loup",
+        "Les Basques"
+      ],
+      [
+        "Rivière-du-Loup",
+        "Kamouraska"
+      ],
+      [
+        "Charlevoix-Est",
+        "Charlevoix"
+      ],
+      [
+        "Charlevoix-Est",
+        "La Haute-Côte-Nord"
+      ],
+      [
+        "Charlevoix",
+        "Lac-Saint-Jean-Est"
+      ],
+      [
+        "La Vallée-de-l'Or",
+        "Rouyn-Noranda"
+      ],
+      [
+        "La Vallée-de-l'Or",
+        "La Vallée-de-la-Gatineau"
+      ],
+      [
+        "Memphrémagog",
+        "Brome-Missisquoi"
+      ],
+      [
+        "Memphrémagog",
+        "Sherbrooke"
+      ],
+      [
+        "Brome-Missisquoi",
+        "Le Haut-Richelieu"
+      ],
+      [
+        "Québec",
+        "La Jacques-Cartier"
+      ],
+      [
+        "Lévis",
+        "La Nouvelle-Beauce"
+      ],
+      [
+        "La Haute-Côte-Nord",
+        "Manicouagan"
+      ],
+      [
+        "Longueuil",
+        "Roussillon"
+      ],
+      [
+        "Longueuil",
+        "La Vallée-du-Richelieu"
+      ],
+      [
+        "Longueuil",
+        "Montréal"
+      ],
+      [
+        "Lajemmerais",
+        "Pierre-De Saurel"
+      ],
+      [
+        "Roussillon",
+        "Beauharnois-Salaberry"
+      ],
+      [
+        "Les Maskoutains",
+        "Rouville"
+      ],
+      [
+        "Les Maskoutains",
+        "La Vallée-du-Richelieu"
+      ],
+      [
+        "Les Maskoutains",
+        "Drummond"
+      ],
+      [
+        "Le Haut-Richelieu",
+        "Les Jardins-de-Napierville"
+      ],
+      [
+        "Maskinongé",
+        "D'Autray"
+      ],
+      [
+        "Maskinongé",
+        "Francheville"
+      ],
+      [
+        "Maskinongé",
+        "Shawinigan"
+      ],
+      [
+        "Nicolet-Yamaska",
+        "Pierre-De Saurel"
+      ],
+      [
+        "Nicolet-Yamaska",
+        "Bécancour"
+      ],
+      [
+        "Les Collines-de-l'Outaouais",
+        "Papineau"
+      ],
+      [
+        "Les Collines-de-l'Outaouais",
+        "Gatineau"
+      ],
+      [
+        "Papineau",
+        "La Vallée-de-la-Gatineau"
+      ],
+      [
+        "Papineau",
+        "Antoine-Labelle"
+      ],
+      [
+        "Papineau",
+        "Argenteuil"
+      ],
+      [
+        "Bonaventure",
+        "Le Rocher-Percé"
+      ],
+      [
+        "Bonaventure",
+        "Avignon"
+      ],
+      [
+        "La Haute-Gaspésie",
+        "La Côte-de-Gaspé"
+      ],
+      [
+        "La Haute-Gaspésie",
+        "Matane"
+      ],
+      [
+        "La Mitis",
+        "Matane"
+      ],
+      [
+        "La Mitis",
+        "Avignon"
+      ],
+      [
+        "La Mitis",
+        "La Matapédia"
+      ],
+      [
+        "La Mitis",
+        "Rimouski-Neigette"
+      ],
+      [
+        "Les Moulins",
+        "Laval"
+      ],
+      [
+        "Les Moulins",
+        "L'Assomption"
+      ],
+      [
+        "Les Moulins",
+        "Montcalm"
+      ],
+      [
+        "Les Moulins",
+        "Thérèse-De Blainville"
+      ],
+      [
+        "Laval",
+        "Montréal"
+      ],
+      [
+        "L'Assomption",
+        "D'Autray"
+      ],
+      [
+        "Lotbinière",
+        "Robert-Cliche"
+      ],
+      [
+        "Lotbinière",
+        "Bécancour"
+      ],
+      [
+        "Joliette",
+        "Montcalm"
+      ],
+      [
+        "Les Jardins-de-Napierville",
+        "Le Haut-Saint-Laurent"
+      ],
+      [
+        "Le Granit",
+        "Les Appalaches"
+      ],
+      [
+        "Les Appalaches",
+        "L'Érable"
+      ],
+      [
+        "Les Appalaches",
+        "Robert-Cliche"
+      ],
+      [
+        "Les Appalaches",
+        "Arthabaska"
+      ],
+      [
+        "Les Appalaches",
+        "Le Haut-Saint-François"
+      ],
+      [
+        "Beauce-Sartigan",
+        "Robert-Cliche"
+      ],
+      [
+        "Maria-Chapdelaine",
+        "Le Domaine-du-Roy"
+      ],
+      [
+        "Les Laurentides",
+        "Argenteuil"
+      ],
+      [
+        "La Nouvelle-Beauce",
+        "Robert-Cliche"
+      ],
+      [
+        "Robert-Cliche",
+        "Bellechasse"
+      ],
+      [
+        "Robert-Cliche",
+        "Les Etchemins"
+      ],
+      [
+        "Rimouski-Neigette",
+        "Témiscouata"
+      ],
+      [
+        "Témiscouata",
+        "Kamouraska"
+      ],
+      [
+        "Kamouraska",
+        "L'Islet"
+      ],
+      [
+        "L'Islet",
+        "Montmagny"
+      ],
+      [
+        "Les Pays-d'en-Haut",
+        "Argenteuil"
+      ],
+      [
+        "Argenteuil",
+        "Vaudreuil-Soulanges"
+      ],
+      [
+        "La Rivière-du-Nord",
+        "Thérèse-De Blainville"
+      ],
+      [
+        "Mirabel",
+        "Thérèse-De Blainville"
+      ],
+      [
+        "Thérèse-De Blainville",
+        "Deux-Montagnes"
+      ],
+      [
+        "Vaudreuil-Soulanges",
+        "Beauharnois-Salaberry"
+      ],
+      [
+        "Les Etchemins",
+        "Montmagny"
+      ],
+      [
+        "Arthabaska",
+        "Les Sources"
+      ],
+      [
+        "Arthabaska",
+        "Drummond"
+      ],
+      [
+        "Sherbrooke",
+        "Le Haut-Saint-François"
+      ],
+      [
+        "Le Val-Saint-François",
+        "Le Haut-Saint-François"
+      ],
+      [
+        "Le Val-Saint-François",
+        "La Haute-Yamaska"
+      ],
+      [
+        "Le Haut-Saint-François",
+        "Coaticook"
+      ],
+      [
+        "Acton",
+        "Drummond"
+      ]
+    ],
+    "grid_cols": 226,
+    "grid_rows": 133,
+    "maze_cells": 10377,
+    "regions_covered": 91,
+    "regions_total": 94
+  }
 }

@@ -1,77 +1,82 @@
 {
- "source": "us-atlas (Census Bureau TIGER/Line, via npm registry.npmjs.org)",
- "states": {
-  "md": {
-   "name": "Maryland",
-   "county_count": 24
-  },
-  "de": {
-   "name": "Delaware",
-   "county_count": 3
-  },
-  "nj": {
-   "name": "New Jersey",
-   "county_count": 21
-  },
-  "ny": {
-   "name": "New York",
-   "county_count": 62
-  }
- },
- "highways": {
-  "I-95": {
-   "waypoints": [
-    {
-     "place": "Baltimore, MD",
-     "lon": -76.6122,
-     "lat": 39.2904
+  "source": "us-atlas (Census Bureau TIGER/Line, via npm registry.npmjs.org) for MD/DE/NJ/NY; highcharts/map-collection-dist ca-qc-all.topo.json (real MRC/TE boundaries) for the Québec corridor, decoded via topojson and pulled via npm registry since statcan.gc.ca was not reachable from this network",
+  "states": {
+    "md": {
+      "name": "Maryland",
+      "county_count": 24
     },
-    {
-     "place": "Wilmington, DE",
-     "lon": -75.5466,
-     "lat": 39.7459
+    "de": {
+      "name": "Delaware",
+      "county_count": 3
     },
-    {
-     "place": "Trenton, NJ",
-     "lon": -74.7597,
-     "lat": 40.2206
+    "nj": {
+      "name": "New Jersey",
+      "county_count": 21
     },
-    {
-     "place": "Newark, NJ",
-     "lon": -74.1724,
-     "lat": 40.7357
+    "ny": {
+      "name": "New York",
+      "county_count": 62
     },
-    {
-     "place": "New York, NY",
-     "lon": -74.006,
-     "lat": 40.7128
+    "qc": {
+      "name": "Québec (southern MRC corridor)",
+      "region_count": 66,
+      "note": "cropped to MRCs with maxlat<=47.9, lon between -78.0 and -69.5, so the drawn area stays proportionate to the MD/DE/NJ/NY combined bounding box; the outer outline is a shapely unary_union of these real MRC polygons rather than 66 overlapping individual outlines"
     }
-   ]
   },
-  "I-87": {
-   "waypoints": [
-    {
-     "place": "New York, NY",
-     "lon": -74.006,
-     "lat": 40.7128
+  "highways": {
+    "I-95": {
+      "waypoints": [
+        {
+          "place": "Baltimore, MD",
+          "lon": -76.6122,
+          "lat": 39.2904
+        },
+        {
+          "place": "Wilmington, DE",
+          "lon": -75.5466,
+          "lat": 39.7459
+        },
+        {
+          "place": "Trenton, NJ",
+          "lon": -74.7597,
+          "lat": 40.2206
+        },
+        {
+          "place": "Newark, NJ",
+          "lon": -74.1724,
+          "lat": 40.7357
+        },
+        {
+          "place": "New York, NY",
+          "lon": -74.006,
+          "lat": 40.7128
+        }
+      ]
     },
-    {
-     "place": "Albany, NY",
-     "lon": -73.7562,
-     "lat": 42.6526
-    },
-    {
-     "place": "Plattsburgh, NY",
-     "lon": -73.4525,
-     "lat": 44.6995
+    "I-87": {
+      "waypoints": [
+        {
+          "place": "New York, NY",
+          "lon": -74.006,
+          "lat": 40.7128
+        },
+        {
+          "place": "Albany, NY",
+          "lon": -73.7562,
+          "lat": 42.6526
+        },
+        {
+          "place": "Plattsburgh, NY",
+          "lon": -73.4525,
+          "lat": 44.6995
+        },
+        {
+          "place": "Montréal, QC",
+          "lon": -73.5674,
+          "lat": 45.5019
+        }
+      ]
     }
-   ]
-  }
- },
- "montreal_arrow_target": {
-  "lon": -73.5674,
-  "lat": 45.5019,
-  "note": "Montreal, QC - drawn as a directional arrow only, not to scale; no Canadian boundary/road dataset was reachable from this environment"
- },
- "note": "Highway routes are real city waypoint coordinates connected with straight/dashed lines, not an actual road-centerline shapefile (TIGER/Line road data and OSM/Overpass were unreachable from this network)."
+  },
+  "note": "Highway routes are real city waypoint coordinates connected with straight/dashed lines, not an actual road-centerline shapefile (TIGER/Line road data and OSM/Overpass were unreachable from this network)."
 }
