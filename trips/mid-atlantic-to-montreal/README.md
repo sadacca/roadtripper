@@ -23,3 +23,6 @@ Ephemera and activities for this trip live in the theme folders below.
   — a single coloring page collaging all five region outlines along the route.
 - [`maze/state-shaped-mazes-md-de-nj-ny-qc/`](maze/state-shaped-mazes-md-de-nj-ny-qc/)
   — a maze carved into the shape of each region, with solutions.
+- [`maze/montreal-borough-maze/`](maze/montreal-borough-maze/) — a maze
+  carved into the real boroughs of the City of Montréal, with real
+  landmarks marked.

@@ -1,0 +1,170 @@
+{
+  "source": "codeforamerica/click_that_hood montreal.geojson (19 real boroughs/arrondissements)",
+  "adjacency_method": "derived from polygon-touching distance (no published shared-arc topojson for this dataset)",
+  "regions": [
+    "Pierrefonds--Roxboro",
+    "Cote-des-Neiges--Notre-Dame-de-Grace",
+    "Ahuntsic-Cartierville",
+    "Outremont",
+    "Plateau-Mont-Royal",
+    "LaSalle",
+    "Pointe-aux-Trembles-Rivieres-des-Prairies",
+    "Rosemont--La-Petite-Patrie",
+    "Ville-Marie",
+    "Anjou",
+    "Montreal-Nord",
+    "Lachine",
+    "Mercier-Hochelaga-Maisonneuve",
+    "Saint-Laurent",
+    "St-Leonard",
+    "Villeray-Saint-Michel-Parc-Extension",
+    "Sud-Ouest",
+    "L'Ile-Bizard--Sainte-Genevieve",
+    "Verdun--Ile-des-Soeurs"
+  ],
+  "adjacency_edges": [
+    [
+      0,
+      13
+    ],
+    [
+      0,
+      17
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      1,
+      13
+    ],
+    [
+      1,
+      16
+    ],
+    [
+      2,
+      10
+    ],
+    [
+      2,
+      13
+    ],
+    [
+      2,
+      15
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      5,
+      11
+    ],
+    [
+      5,
+      18
+    ],
+    [
+      6,
+      10
+    ],
+    [
+      8,
+      12
+    ],
+    [
+      9,
+      12
+    ],
+    [
+      10,
+      14
+    ],
+    [
+      11,
+      13
+    ]
+  ],
+  "manual_bridges": [],
+  "grid": {
+    "cols": 127,
+    "rows": 110,
+    "cell_px": 9
+  },
+  "maze_cells": 4804,
+  "regions_covered": 19,
+  "regions_total": 19,
+  "landmarks": [
+    {
+      "name": "Notre-Dame Basilica",
+      "lon": -73.5563,
+      "lat": 45.5045
+    },
+    {
+      "name": "Old Port of Montreal",
+      "lon": -73.5538,
+      "lat": 45.5075
+    },
+    {
+      "name": "Mont-Royal lookout",
+      "lon": -73.5878,
+      "lat": 45.5048
+    },
+    {
+      "name": "Saint Joseph's Oratory",
+      "lon": -73.6175,
+      "lat": 45.4922
+    },
+    {
+      "name": "Olympic Stadium",
+      "lon": -73.5515,
+      "lat": 45.5579
+    },
+    {
+      "name": "Montreal Botanical Garden",
+      "lon": -73.5535,
+      "lat": 45.5605
+    },
+    {
+      "name": "Atwater Market",
+      "lon": -73.5779,
+      "lat": 45.4836
+    },
+    {
+      "name": "Lachine Canal",
+      "lon": -73.6747,
+      "lat": 45.4276
+    },
+    {
+      "name": "Jean-Talon Market",
+      "lon": -73.6149,
+      "lat": 45.5375
+    },
+    {
+      "name": "Parc La Fontaine",
+      "lon": -73.5689,
+      "lat": 45.5256
+    },
+    {
+      "name": "Verdun Beach",
+      "lon": -73.5688,
+      "lat": 45.4499
+    },
+    {
+      "name": "Parc-nature du Bois-de-Liesse",
+      "lon": -73.7307,
+      "lat": 45.5042
+    }
+  ]
+}
